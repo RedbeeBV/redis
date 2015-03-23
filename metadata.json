@@ -1,6 +1,6 @@
 {
   "name": "redbeebv-redis",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Dany Henriquez",
   "summary": "Configure Redis and/or Sentinel. Only for systemd!",
   "license": "MIT",
