@@ -9,7 +9,7 @@
 
 ## Overview
 
-[![Build Status](https://travis-ci.org/Danoon/redis.svg?branch=master)](https://travis-ci.org/Danoon/redis)
+[![Build Status](https://travis-ci.org/RedbeeBV/redis.svg?branch=master)](https://travis-ci.org/RedbeeBV/redis)
 
 Easy deployment of multiple redis or instances for systems that work with systemd.
 
