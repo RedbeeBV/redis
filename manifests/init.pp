@@ -45,7 +45,7 @@ class redis{
     ensure => installed,
   }
 
-  service { "redis":
+  service { 'redis':
     ensure     => stopped,
     enable     => false,
     hasrestart => true,
