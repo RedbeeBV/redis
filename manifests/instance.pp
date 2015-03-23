@@ -11,11 +11,11 @@ define redis::instance(
     }
 
     file { "/etc/redis-${title}.conf":
-      content => template("redis/redis.erb")
+      content => template('redis/redis.erb')
     }
 
     file { "/etc/systemd/system/redis-${title}.service":
-      content => template("redis/redis.service.erb")
+      content => template('redis/redis.service.erb')
     }
 
     exec { 'reload systemd services':

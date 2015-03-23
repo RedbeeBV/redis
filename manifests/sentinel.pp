@@ -11,11 +11,11 @@ define redis::sentinel(
     }
 
     file { "/etc/redis-sentinel-${title}.conf":
-      content => template("redis/sentinel.erb")
+      content => template('redis/sentinel.erb')
     }
 
     file { "/etc/systemd/system/redis-sentinel-${title}.service":
-      content => template("redis/sentinel.service.erb")
+      content => template('redis/sentinel.service.erb')
     }
 
     exec { 'reload systemd services':
