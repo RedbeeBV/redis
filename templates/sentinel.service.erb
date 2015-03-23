@@ -1,0 +1,13 @@
+[Unit]
+Description=Redis <%= title %> Sentinel
+After=network.target
+
+[Service]
+ExecStartPre=/usr/bin/mkdir -p /var/lib/redis-sentinel-<%= title %>
+ExecStart=/usr/bin/redis-sentinel /etc/redis-sentinel-<%= title %>.conf
+ExecStop=/usr/bin/redis-shutdown sentinel
+User=redis
+Group=redis
+
+[Install]
+WantedBy=multi-user.target
