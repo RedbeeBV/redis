@@ -23,6 +23,7 @@ This module can configure multiple redis or sentinel instances on one server for
 redis::instance { 'one':
   ip_address = '0.0.0.0',
   port = '6379',
+  slaveof = false,
   ensure = running,
   enable = true
 }
@@ -48,9 +49,9 @@ redis::sentinel { 'cluster':
       down_after_milliseconds => 30000,
       parallel-syncs          => 5,
       failover_timeout        => 180000,
-      auth-pass => 'secret_Password',
-      notification-script => '/tmp/notify.sh',
-      client-reconfig-script => '/tmp/reconfig.sh'
+      auth-pass               => 'password',
+      notification-script     => '/tmp/notify.sh',
+      client-reconfig-script  => '/tmp/reconfig.sh'
     }
 }
 ```

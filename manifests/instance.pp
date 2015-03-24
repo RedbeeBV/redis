@@ -3,7 +3,7 @@ define redis::instance(
   $port = '6379',
   $ensure = running,
   $enable = true,
-  $slaveof = undef,
+  $slaveof = false,
   ) {
 
     file { "/var/lib/redis-${title}/":
